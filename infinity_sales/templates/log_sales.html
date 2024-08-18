@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+    {% block content %}
+
+        <script type="text/javascript" src="{{ url_for( 'static', filename = 'log_sales.js')}}"></script>
+        <script>
+            let clients = {{ clients|tojson }}
+            let sales = {{ sales|tojson }}
+            console.log(sales)
+        </script>
+        
+
+        <div class="header">
+            <div class="title">Columbia Paper Infinity</div>
+            <div id="trash_row" class="trash">trash</div>
+        </div>
+        <div id="input_row" class="row">
+            <div class="col-3 entries">
+                <div class="init_text">Log your paper sales:</div>
+            </div>
+            <div class="col-3">
+                <input type="text" id="client" class="client" placeholder="Client" autocomplete="on"></input>
+                <datalist id="client-list"></datalist>
+            </div>
+            <div class="col-1">
+                <span class="warning" id="clientWarning"></span>
+            </div>
+            <div class="col-2">
+                <input type="text" id="reams" class="reams" placeholder="# Reams"></input>
+            </div>
+            <div class="col-1">
+                <span class="warning" id="reamWarning"></span>
+            </div>
+            <div class="col-2">
+                <button id="submit" class="btn submit_btn">Submit</button>
+            </div>
+
+            <div class="col-12 sales_container" id="sales_container">
+
+            </div>
+        </div>
+    {% endblock %}

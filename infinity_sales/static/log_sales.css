@@ -1,0 +1,100 @@
+.header {
+    background-color: rgb(176,220,228);
+    padding:25px 10px 5px 15px;
+    margin-bottom: 20px;
+    margin-left:0;
+
+}
+
+.title {
+    font-size:3vw;
+    font-weight: bold;
+    margin-left:10px;
+}
+
+.row {
+    margin-left:15px;
+}
+
+.submit_btn{
+    background-color: rgb(0, 89, 255);
+    color:white;
+}
+
+.client {
+    width:100%;
+    margin-right:0px;
+    padding-right:0px;
+    margin-left:0;
+}
+
+.reams{
+    width:100%;
+}
+
+
+.init_text, .client, .reams, .btn {
+    margin-bottom:5%;
+}
+
+.trash_btn {
+    background-color: rgb(255,192,8);
+}
+
+.warning {
+    color:red;
+    font-weight: bold;
+}
+
+.trash {
+    font-size: 15px;
+    font-weight:normal;
+    background-color: lightgray;
+    border:1px solid black;
+    padding:15px 0px 15px 15px;
+    margin: 10px 50px 10px 10px;
+}
+
+.hovering {
+    background-color: lightyellow;
+}
+
+.hovered {
+    background-color:yellow;
+}
+
+.sales, .trash_btn {
+    padding-top:10px;
+    margin-top:-5px;
+}
+
+.welcome {
+    background-color: rgb(176,220,228);
+    padding:0px 10px 5px 15px;
+    margin-bottom: 20px;
+    margin-left:0;
+
+}
+
+.wlc_msg {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.reminder {
+    font-size: 20px;
+}
+
+.entries {
+    padding-left:0;
+    padding-right:0;
+    margin-right:0;
+    margin-left:0;
+}
+
+.sales_container {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
