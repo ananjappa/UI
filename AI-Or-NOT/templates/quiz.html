@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" href="https://www.apple.com/v/app-store/b/images/overview/icon_appstore__ev0z770zyxoy_large_2x.png">
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- bootstrap same as before -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+    <script>
+        let item = {{ item|tojson }} 
+        let next_id = {{ next_id|tojson }} 
+        let correct_answers = {{ correct_answers|tojson }}
+        let user_answers = {{ user_answers|tojson }} 
+    </script>
+
+
+    <style>
+
+        img {
+            width: 300px;
+            height: auto;
+        }
+
+        body {
+            background-color: #DCEAF7;
+        }
+
+        .quiz {
+            margin-left: 3%;
+            margin-top:2%;
+            margin-bottom:1%;
+            font-size: 40px;
+            font-weight: light;
+        }
+
+        .q_num {
+            color: #747474;
+            font-size: 30px;
+            font-weight: light;
+            margin-left: 3%;
+            border-bottom: 10px solid #E59EDD; /* Adjust the color and thickness as needed */
+            padding-bottom: 5px;
+            margin-bottom: 2%;
+            max-width: 150px;
+        }
+
+        .question {
+            color: #E59EDD;
+            font-size: 20px;
+            font-weight: light;
+            margin-left: 3%;
+            max-width: 50%;
+            margin-bottom: 10px;
+        }
+
+
+        .image {
+            margin-left: 6%;
+            margin-bottom: 2%;
+            max-height: 400px;
+            height:250px;
+            width:auto;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .choices {
+            font-size: 25px;
+            margin-left:3%;
+            margin-bottom:2%;
+        }
+
+        .margin {
+            margin-left:3%;
+        }
+        .prev_btn {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding:10px 20px 10px 20px;
+        }
+        .next_btn {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding:10px 30px 10px 30px;
+        }
+
+        .quiz_btn {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            padding:10px 30px 10px 30px;
+            background-color: #E59EDD;
+        }
+
+        .wrong_ans{
+            max-width: 50%;
+            font-size: 20px;
+            color:red;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+
+    <div class="quiz">Quiz Page</div>
+
+    <div class="q_num">Question {{ next_id }}:</div>
+
+    <div class="question">{{ item.Question }}</div>
+    <div class="row">
+        {% if item.image_path %}
+        <div class="col-5">
+            <img class="image" src="/static/{{ item.image_path }}.png" alt="Image">
+        </div>
+        {% endif %}
+        
+       
+        <form class="choices">
+            {% for choice in item.choice %}
+            <div class="col-12">
+                <label><input class="choice" type="radio" name="answer" value="{{ choice.option }}"> {{ choice.selection }}</label>
+            </div>
+            {% endfor %} 
+    
+    </div>
+            <div id="btn_row" class="row">
+                <button id="submitButton" class="next_btn margin" type="submit">Check</button>
+            </div>
+        </form>
+       
+        <!-- bootstrap same as before <form action="/quiz/{{ prev_id }}" method="get" style="display: inline;">
+            <button type="submit">Previous</button>
+        </form>-->
+    
+    
+
+    <br>
+    <br>
+
+
+</body>
+
+</html>
