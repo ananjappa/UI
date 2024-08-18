@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <script type="text/javascript" src="{{ url_for( 'static', filename = 'view.js')}}"></script>
+    <script>
+        let boss = {{ boss|tojson }};
+        let names = {{ names|tojson }} 
+    </script>
+
+    <div class="col-11 pop_container" id="pop_container">
+
+    </div>
+        
+{% endblock %}

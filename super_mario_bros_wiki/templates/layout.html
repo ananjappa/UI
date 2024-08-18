@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- jquery -->
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='SMB_wiki.css')}}">
+
+    </head>
+    <body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light header">
+            <img class="navbar-brand logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mario_Series_Logo.svg/2560px-Mario_Series_Logo.svg.png" alt="Super Mario Bros Logo">
+            <a class="navbar-brand web_title" href="/"> New Super Mario Bros WikiHow </a>
+            <form class="search-bar d-flex" id="search-bar">
+                <input class="form-control textbox" id="textbox" type="search" placeholder="Search">
+                <input class="btn btn-outline-success" id="btn" type="submit" value="Search">
+            </form>
+            <a href="/add"><input class="btn btn-outline-success" type="text" value="Add New Enemy!"></a>
+        </nav>
+    
+        <div class="container-fluid">   
+            {% block content %}
+            {% endblock %}
+        </div>
+          
+    </body>
+</html>

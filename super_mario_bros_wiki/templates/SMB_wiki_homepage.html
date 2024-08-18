@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <script type="text/javascript" src="{{ url_for( 'static', filename = 'homepage.js')}}"></script>    
+    <script>
+        let bosses = {{ bosses|tojson }}
+        let names = {{ names|tojson }}
+    </script>
+    
+    <div class="home_row row">
+        <div class="col-2"></div>
+        <div class="home col-8 row align-items-center">
+            <img src="../static/logo_2.jpg" alt="Super Mario Bros Enemy Edition Logo" class="homepage_logo d-inline">
+            <div class="site_title col-3">New Super Mario Bros Enemies Wikipedia</div>
+            <div class="site_summary col-7">For fans of the game or for players who wish to know more about their enmies.</div>
+        </div>
+    </div>
+    
+    <div class="col-11 pop_container" id="pop_container">
+
+        
+        
+        <div class="title">Popular Search Results:</div>
+
+    </div>
+
+{% endblock %}

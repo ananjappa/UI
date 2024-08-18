@@ -1,0 +1,289 @@
+.header {
+    width:100vw;
+    background-color: rgb(211, 31, 43);
+    padding:25px 10px 15px 15px;
+    margin-left:0;
+}
+
+.title {
+    font-size:2.8vw;
+    font-weight: 400;
+    margin-left:10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add the following line to move the nav container to the left */
+    /* Add the following line to align items to the start */
+    padding-left: 20px;
+}
+
+.btn {
+    color: lightgray;
+    border-color: grey;
+    background-color: grey;
+    margin-right:1%;
+
+}
+
+.textbox {
+    width: 20vw;
+    margin-right: 1%;
+}
+
+.charc_pic {
+    width:100px;
+    height:auto;
+}
+
+.boss {
+    margin-bottom:5%;
+    background-color: lightgray;
+    margin-right:3%;
+    margin-left:3%;
+    height:200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.name {
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+body {
+    height:100%;
+    margin-bottom:30px;
+    background-image: url("https://cdn.dribbble.com/users/1680738/screenshots/3440148/media/5c29f0d531a9b29ac4afef4b2ef233d8.jpg");
+}
+
+.pop_container {
+    background-color: lightblue;
+    padding-top:10px;
+    height:100%;
+    padding-bottom: 10px;
+    margin: 3% 0 3% 4%;
+}
+
+.web_title {
+    font-size: 40px;
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    margin-left:0;
+    padding-left:0;
+}
+    
+.hovering {
+    background-color:darkgrey;
+}
+
+.charc_page_pic {
+    margin-bottom:20px;
+    padding-bottom:20px;
+    width:400px;
+    height:auto;
+}
+
+.summary {
+    margin-left:2%;
+    margin-bottom:3%;
+}
+
+.world_difficulty {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.world {
+    border-radius: 5px;
+    margin-left:5%;
+    background-color: green;
+}
+
+.difficulty {
+    border-radius: 5px;
+    margin-left:5%;
+    background-color: red;
+}
+
+.enemy {
+    margin-left: 3%;
+    color:black;
+}
+
+.enemy_title {
+    margin-left:3%;
+    font-weight: 300;
+    font-size: 40px;
+}
+
+.logo {
+    width:100px;
+    height:auto;
+    margin-right:0;
+    padding-right:0;
+}
+
+
+.homepage_logo {
+    width:100px;
+    height:auto;
+}
+
+.boss-summary {
+
+    /* hide text if it more than N lines  */
+    overflow: hidden;
+    /* for set '...' in absolute position */
+    position: relative; 
+    /* use this value to count block height */
+    line-height: 1.2em;
+    /* max-height = line-height (1.2) * lines max number (3) */
+    max-height: 4.8em; 
+    /* fix problem when last visible word doesn't adjoin right side  */
+    text-align: justify;  
+    /* place for '...' */
+    margin-right: 0;
+    padding-right: 1em;
+}
+/* create the ... */
+.boss-summary:before {
+    /* points in the end */
+    content: '...';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of block */
+    right: 0;
+    bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.boss-summary:after {
+    /* points in the end */
+    content: '';
+    /* absolute position */
+    position: absolute;
+    /* set position to right bottom corner of text */
+    right: 0;
+    /* set width and height */
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    /* bg color = bg color under block */
+    background: white;
+}
+
+.finding {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 1%;
+    color:rgb(192, 1, 1);
+}
+
+.home{
+    margin-top:1%;
+    margin-bottom:0%;
+    padding-top:1%;
+    padding-bottom:1%;
+    background-color:grey;
+}
+
+.site_title{
+    margin-left: 1%;
+    font-size: 20px;
+    margin-right:0;
+}
+.site_summary {
+    margin-left:0;
+    font-size:18px;
+}
+
+.highlight-result {
+    background-color: gold;
+}
+
+.nickname {
+    font-size: 15px;
+    opacity:0.5;
+}
+
+.nickname_view{
+    font-size: 20px;
+    margin-left:1%;
+    opacity:0.6;
+    margin-bottom:1%;
+    color:grey;
+}
+
+.add_entry {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green; /* Blue color */
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add_header{
+    width:100vw;
+    background-color: rgb(211, 31, 43);
+    padding:25px 10px 15px 15px;
+    margin-left:0;
+    margin-bottom:1%;
+}
+
+#success-notification {
+    background-color: LightPink;
+    text-align: center;
+    font-size: 14px;
+}
+
+#input-name {
+    width: 300px;
+}
+#input-difficulty, #input-world_level {
+    width: 100px;
+}
+
+.edit_text {
+    font-size: 20px;
+    margin-left:1%;
+    display: flex;
+    justify-content: center;
+    margin-top:5%
+}
+
+.edit-btns{
+    display: flex;
+    justify-content: center;
+}
+
+.edit-btn {
+    text-align: center;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: lightgray;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: grey;
+    border-color: grey; 
+}
+
+.edit-btn:active {
+    background-color: #ccc;
+    color: #444;
+    border-color: #888;
+}

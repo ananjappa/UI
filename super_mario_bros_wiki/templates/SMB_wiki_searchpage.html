@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <script type="text/javascript" src="{{ url_for( 'static', filename = 'search.js')}}"></script>
+    <script>
+        let search = {{ search|tojson }}
+        let n_items = {{ n_items|tojson }};
+        let results = {{ results|tojson }};
+        let names = {{ names|tojson }} 
+    </script>
+
+    <div class="col-11 pop_container" id="pop_container">
+
+    </div>
+        
+{% endblock %}
